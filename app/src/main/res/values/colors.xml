@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorButtonContinue">#FFB07941</color>
+    <color name="colorWhite">#FFFDFDFD</color>
+    <color name="backgroundHomeColor">#cac6be</color>
+    <color name="sniperColor">#FF8EDBF3</color>
+    <color name="blackColor">#FF03161D</color>
+</resources>
