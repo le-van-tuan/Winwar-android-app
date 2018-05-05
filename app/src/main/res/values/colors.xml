@@ -8,4 +8,5 @@
     <color name="backgroundHomeColor">#cac6be</color>
     <color name="sniperColor">#FF8EDBF3</color>
     <color name="blackColor">#FF03161D</color>
+    <color name="tabsColor">#FF2F353C</color>
 </resources>

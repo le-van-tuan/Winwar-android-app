@@ -2,5 +2,6 @@
     <string name="app_name">Winwar</string>
 
     <string name="result">English is your language</string>
-    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="window7Name">Window 7</string>
 </resources>

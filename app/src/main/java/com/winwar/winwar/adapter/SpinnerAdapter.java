@@ -12,14 +12,14 @@ import android.widget.TextView;
 
 import com.winwar.winwar.R;
 
-public class CustomAdapter extends ArrayAdapter<String> {
+public class SpinnerAdapter extends ArrayAdapter<String> {
 
-    int[] spinnerImages;
-    String[] spinnerName;
-    Context mContext;
+    private int[] spinnerImages;
+    private String[] spinnerName;
+    private Context mContext;
 
 
-    public CustomAdapter(@NonNull Context context, int[] images, String[] spinnerName) {
+    public SpinnerAdapter(@NonNull Context context, int[] images, String[] spinnerName) {
         super(context, R.layout.custom_spinner_row);
         this.spinnerImages = images;
         this.spinnerName = spinnerName;

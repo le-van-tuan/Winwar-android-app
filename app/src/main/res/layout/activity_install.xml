@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/backgroundHomeColor"
     tools:context="com.winwar.winwar.InstallActivity">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <TextView
-            android:layout_centerInParent="true"
-            android:textSize="20sp"
-            android:textColor="@color/colorWhite"
-            android:layout_gravity="center"
-            android:text="@string/result"
+    <android.support.design.widget.AppBarLayout
+        android:background="@color/tabsColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.NoActionBar.AppBarOverlay">
+
+        <android.support.design.widget.TabLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
-</LinearLayout>
+            android:id="@+id/MyTabs"
+            app:tabGravity="center"
+            app:tabMode="scrollable"
+            app:tabIndicatorColor="@color/colorWhite"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            android:layout_height="?attr/actionBarSize"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/install_content" />
+
+</android.support.design.widget.CoordinatorLayout>
