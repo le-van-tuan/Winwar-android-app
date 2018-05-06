@@ -12,6 +12,7 @@ import com.winwar.winwar.InstallActivity;
 import com.winwar.winwar.R;
 import com.winwar.winwar.adapter.CustomListViewAdapter;
 import com.winwar.winwar.attribute.AppConstant;
+import com.winwar.winwar.context.ApplicationContextHolder;
 import com.winwar.winwar.model.DetailStep;
 
 import java.util.ArrayList;
@@ -31,7 +32,7 @@ public class Window7 extends android.support.v4.app.Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.window_7_install, container, false);
 
-        detailSteps = initDetailStepWindow7();
+        detailSteps = getDetailStepWindow7();
         /* setup list view */
         listView = view.findViewById(R.id.listStepWindow7);
 
@@ -41,13 +42,17 @@ public class Window7 extends android.support.v4.app.Fragment{
         return view;
     }
 
-    private List<DetailStep> initDetailStepWindow7() {
+    private List<DetailStep> getDetailStepWindow7() {
         List<DetailStep> detailSteps = new ArrayList<>();
-        for (int i = 0; i < AppConstant.NUMBER_OF_WINDOW7_STEP; i ++){
-            DetailStep detailStep = new DetailStep(i+1);
+
+        String[] contents = ApplicationContextHolder.getListStringById(R.array.window7_content_step);
+
+        for(int i = 0 ; i < contents.length ; i ++){
+            DetailStep detailStep = new DetailStep(i+1, contents[i], 0);
 
             detailSteps.add(detailStep);
         }
+
         return detailSteps;
     }
 }

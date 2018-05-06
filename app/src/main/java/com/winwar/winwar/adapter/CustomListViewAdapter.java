@@ -50,7 +50,7 @@ public class CustomListViewAdapter extends ArrayAdapter<DetailStep> {
         }
 
         viewHolder.numberOfTheStep.setText(String.valueOf(detailStep.getStep()));
-        viewHolder.contentOfStep.setText(String.valueOf(ApplicationContextHolder.getStringById(R.string.window7Name)));
+        viewHolder.contentOfStep.setText(String.valueOf(detailStep.getContent()));
 
         return convertView;
     }

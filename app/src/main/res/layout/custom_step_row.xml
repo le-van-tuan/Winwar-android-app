@@ -1,22 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/numberOfStep"
-        android:textStyle="bold"
-        android:textColor="@color/blackColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_weight="0.06"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="10"
+            android:id="@+id/numberOfStep"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="@color/blackColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/contentOfStep"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="@color/blackColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="0.7"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.3">
+
+                <ImageView
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/imageOfStep"
+                    android:src="@mipmap/winwar_text_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6">
+
+                <TextView
+                    android:text="hom any la thu may"
+                    android:id="@+id/contentOfStep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:textSize="12dp"
+                    android:textColor="@color/blackColor"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

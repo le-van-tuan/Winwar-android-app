@@ -16,6 +16,12 @@ public class ApplicationContextHolder {
         return resources.getString(id);
     }
 
+    public static String[] getListStringById(int id){
+        Resources resources = new android.content.res.Resources(assertMng, metrics, conf);
+
+        return resources.getStringArray(id);
+    }
+
     public static void changeApplicationContext(Configuration conf, DisplayMetrics metrics, AssetManager asmng ){
         conf = conf;
         metrics = metrics;

@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Winwar</string>
 
-    <string name="result">Voici votre langue</string>
-    <string name="window7Name">Fenêtre 7</string>
+    <!--Window 7-->
+    <string-array name="window7_content_step">
+        <item>allume l'ordinateur</item>
+        <item>allume l'ordinateur</item>
+        <item>Enter the random</item>
+        <item>Waiting for three minutes</item>
+        <item>Turn on computer</item>
+        <item>Unlock computer</item>
+        <item>Enter the random</item>
+        <item>Waiting for three minutes</item>
+        <item>Turn on computer</item>
+        <item>Finished !</item>
+    </string-array>
 </resources>
