@@ -1,12 +1,15 @@
 package com.winwar.winwar.adapter;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.winwar.winwar.R;
@@ -19,11 +22,13 @@ public class CustomListViewAdapter extends ArrayAdapter<DetailStep> {
 
     private List<DetailStep> detailSteps;
     private Context mContext;
+    private TypedArray imagesStep;
 
-    public CustomListViewAdapter(List<DetailStep> detailSteps, @NonNull Context context){
+    public CustomListViewAdapter(List<DetailStep> detailSteps, @NonNull Context context, TypedArray typedArray){
         super(context, R.layout.custom_step_row, detailSteps);
         this.detailSteps = detailSteps;
         this.mContext = context;
+        this.imagesStep = typedArray;
     }
 
     @NonNull
@@ -41,16 +46,16 @@ public class CustomListViewAdapter extends ArrayAdapter<DetailStep> {
 
             viewHolder.numberOfTheStep = convertView.findViewById(R.id.numberOfStep);
             viewHolder.contentOfStep = convertView.findViewById(R.id.contentOfStep);
-
+            viewHolder.imageOfStep = convertView.findViewById(R.id.imageOfStep);
 
             convertView.setTag(viewHolder);
         } else {
            viewHolder = (ViewHolder) convertView.getTag();
 
         }
-
         viewHolder.numberOfTheStep.setText(String.valueOf(detailStep.getStep()));
         viewHolder.contentOfStep.setText(String.valueOf(detailStep.getContent()));
+        viewHolder.imageOfStep.setImageResource(imagesStep.getResourceId(position,-1));
 
         return convertView;
     }
@@ -58,5 +63,6 @@ public class CustomListViewAdapter extends ArrayAdapter<DetailStep> {
     private static class ViewHolder {
         TextView numberOfTheStep;
         TextView contentOfStep;
+        ImageView imageOfStep;
     }
 }

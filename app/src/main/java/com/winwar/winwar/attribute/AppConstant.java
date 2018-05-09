@@ -6,5 +6,5 @@ public class AppConstant {
     public static final String VIETNAMESE = "Vietnamese";
     public static final String FRANCE = "France";
 
-    public static final int NUMBER_OF_WINDOW7_STEP = 10;
+    public static final int NUMBER_OF_WINDOW7_STEP = 13;
 }

@@ -3,15 +3,43 @@
 
     <!--Window 7-->
     <string-array name="window7_content_step">
-        <item>Bật máy tính lên</item>
-        <item>Bật máy tính lên</item>
-        <item>Enter the random</item>
-        <item>Waiting for three minutes</item>
-        <item>Turn on computer</item>
-        <item>Unlock computer</item>
-        <item>Enter the random</item>
-        <item>Waiting for three minutes</item>
-        <item>Turn on computer</item>
-        <item>Finished !</item>
+        <item>Turn off the computer that you want to install Windows on then turn it back on. When the BIOS screen appears or you are prompted to do so, press Del, Esc, F2, F10, or F9 (depending on your computer’s motherboard) to enter the system BIOS. The key to enter the BIOS is usually shown on the screen.</item>
+        <item>The boot options menu of your BIOS may vary in location or name from the illustration, but you may eventually find it if you search around.
+If you can not find the boot options menu, search the name of your BIOS (most likely located in the BIOS menu) online for help.</item>
+        <item>Although this method may vary among computers, the boot options menu is typically a menu of movable device names where you should set your CD-ROM drive as the first boot device. It can also be a list of devices that you can set the order of their boot on. Consult a manual or the internet for help if you are stuck.</item>
+        <item>Press the button indicated on the screen or select the save option from the BIOS menu to save your configuration.</item>
+        <item>Either turn off the computer by choosing the shut-down option in your current operating system, or hold the power button until the computer powers off.</item>
+        <item>Power on the PC and the insert the Windows 7 disc into your CD/DVD drive.</item>
+        <item>After you have placed the disc into the disc drive, start your computer. When the computer starts, press a key if you are asked if you would like to boot from the disc by pressing any key. After you choose to start from the disc, Windows Setup will begin loading.
+If you are not asked to boot from the disc, you may have done something wrong. Retry the previous steps to solve the problem.</item>
+        <item>Once Windows Setup loads, you will be presented with a window. Select your preferred language, keyboard type, and time/currency format, then click Next.</item>
+        <item>Click the Install Now button.</item>
+        <item>Read over the Microsoft Software License Terms, check I accept the license terms, and click Next.</item>
+        <item>Select the Custom installation.</item>
+        <item>A hard drive is a physical part of your computer that stores data, and partitions "divide" hard drives into separate parts.
+If the hard drive has data on it, delete the data off of it, or format it. Select the hard drive from the list of hard drives. Click Drive options (advanced). Click Format from Drive options.
+If your computer does not have any partitions yet, create one to install Windows on it.
+Select the hard drive from the list of hard drives.
+Click Drive options (advanced).
+Select New from Drive options.
+Select the size, and click OK.</item>
+        <item>Once you have decided on where to install Windows, select it and click Next. Windows will begin installing.</item>
     </string-array>
+
+    <integer-array name="window7_images_step">
+        <item>@drawable/window7_step1</item>
+        <item>@drawable/window7_step2</item>
+        <item>@drawable/window7_step3</item>
+        <item>@drawable/window7_step4</item>
+        <item>@drawable/window7_step5</item>
+        <item>@drawable/window7_step6</item>
+        <item>@drawable/window7_step7</item>
+        <item>@drawable/window7_step8</item>
+        <item>@drawable/window7_step9</item>
+        <item>@drawable/window7_step10</item>
+        <item>@drawable/window7_step11</item>
+        <item>@drawable/window7_step12</item>
+        <item>@drawable/window7_step13</item>
+    </integer-array>
+
 </resources>

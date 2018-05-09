@@ -2,13 +2,11 @@ package com.winwar.winwar.pages;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.winwar.winwar.InstallActivity;
 import com.winwar.winwar.R;
 import com.winwar.winwar.adapter.CustomListViewAdapter;
 import com.winwar.winwar.attribute.AppConstant;
@@ -36,7 +34,7 @@ public class Window7 extends android.support.v4.app.Fragment{
         /* setup list view */
         listView = view.findViewById(R.id.listStepWindow7);
 
-        CustomListViewAdapter adapter = new CustomListViewAdapter(detailSteps, getActivity().getApplicationContext());
+        CustomListViewAdapter adapter = new CustomListViewAdapter(detailSteps, getActivity().getApplicationContext(), ApplicationContextHolder.getTypeArrayById(R.array.window7_images_step));
         listView.setAdapter(adapter);
 
         return view;
@@ -47,8 +45,8 @@ public class Window7 extends android.support.v4.app.Fragment{
 
         String[] contents = ApplicationContextHolder.getListStringById(R.array.window7_content_step);
 
-        for(int i = 0 ; i < contents.length ; i ++){
-            DetailStep detailStep = new DetailStep(i+1, contents[i], 0);
+        for(int i = 0; i < AppConstant.NUMBER_OF_WINDOW7_STEP; i ++){
+            DetailStep detailStep = new DetailStep(i+1, contents[i]);
 
             detailSteps.add(detailStep);
         }

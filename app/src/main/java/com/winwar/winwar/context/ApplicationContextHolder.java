@@ -3,6 +3,7 @@ package com.winwar.winwar.context;
 import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.util.DisplayMetrics;
 
 public class ApplicationContextHolder {
@@ -20,6 +21,18 @@ public class ApplicationContextHolder {
         Resources resources = new android.content.res.Resources(assertMng, metrics, conf);
 
         return resources.getStringArray(id);
+    }
+
+    public static int[] getListIntById(int id){
+        Resources resources = new android.content.res.Resources(assertMng, metrics, conf);
+
+        return resources.getIntArray(id);
+    }
+
+    public static TypedArray getTypeArrayById(int id){
+        Resources resources = new android.content.res.Resources(assertMng, metrics, conf);
+
+        return resources.obtainTypedArray(id);
     }
 
     public static void changeApplicationContext(Configuration conf, DisplayMetrics metrics, AssetManager asmng ){

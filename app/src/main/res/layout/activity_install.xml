@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundHomeColor"
+    android:background="@color/whiteBackground"
     tools:context="com.winwar.winwar.InstallActivity">
 
     <android.support.design.widget.AppBarLayout

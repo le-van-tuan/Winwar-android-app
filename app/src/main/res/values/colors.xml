@@ -9,4 +9,5 @@
     <color name="sniperColor">#FF8EDBF3</color>
     <color name="blackColor">#FF03161D</color>
     <color name="tabsColor">#FF2F353C</color>
+    <color name="whiteBackground">#EBEBE8</color>
 </resources>
